@@ -22,7 +22,7 @@ Connect to Pi: `ssh IP` password is `raspberry`
 - change timezone
 - advanced > memory split 256
 
-`sudo nano /boot/config.txt` add `display_rotate=1`
+`sudo nano /boot/config.txt` add `display_rotate=1` and `hdmi_force_hotplug=1`
 
 `sudo nano /etc/xdg/lxsession/LXDE-pi/autostart`
 
