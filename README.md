@@ -21,9 +21,22 @@ Connect to Pi: `ssh IP` password is `raspberry`
 - change locale
 - change timezone
 - advanced > memory split 256
-- 
 
 `sudo nano /boot/config.txt` add `display_rotate=1`
+
+`sudo nano /etc/xdg/lxsession/LXDE-pi/autostart`
+
+Disable everything here with a `#`.
+
+add
+```
+@xset s off
+@xset -dpms
+@xset s noblank
+```
+
+
+Use `sudo apt-get update && apt-get upgrade -y` to upgrade system.
 
 
 
