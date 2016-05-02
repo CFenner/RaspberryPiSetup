@@ -14,6 +14,8 @@ Exec `sudo dd bs=1m if=/Users/Chrissi/Downloads/2016-03-18-raspbian-jessie.img o
 
 Connect to Pi: `ssh IP` password is `raspberry`
 
+###raspi-config
+
 `sudo raspi-config`
 
 - change password
@@ -21,6 +23,8 @@ Connect to Pi: `ssh IP` password is `raspberry`
 - change locale
 - change timezone
 - advanced > memory split 256
+
+###/boot/config.txt
 
 `sudo nano /boot/config.txt` 
 
@@ -34,6 +38,8 @@ overscan_top=-25
 overscan_bottom=-25
 ```
 
+###/etc/xdg/lxsession/LXDE-pi/autostart
+
 `sudo nano /etc/xdg/lxsession/LXDE-pi/autostart`
 
 Disable everything here with a `#`.
@@ -45,14 +51,31 @@ add
 @xset s noblank
 ```
 
+###/etc/lightdm/lightdm.conf
+
+Edit _/etc/lightdm/lightdm.conf_.
+
+```
+sudo nano /etc/lightdm/lightdm.conf
+```
+
+Below `[SeatDefault]` add `xserver-command=X -s 0 -dpms`.
+
+###/etc/modprobe.d/8192cu.conf
+
+```
+sudo nano /etc/modprobe.d/8192cu.conf
+```
 
 Use `sudo apt-get update && apt-get upgrade -y` to upgrade system.
 
-
-
 ### WiFi
 
-Add network settings: `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
+Add network settings: 
+
+```
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
 
 ```shell
 network={
@@ -64,3 +87,4 @@ network={
 ### Usage
 
 Type `sudo halt` to stop the pi.
+Type `pm2 restart mm` to restart magic mirror.
