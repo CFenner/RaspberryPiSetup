@@ -55,17 +55,22 @@ add
 
 Edit _/etc/lightdm/lightdm.conf_.
 
-```
-sudo nano /etc/lightdm/lightdm.conf
-```
+`sudo nano /etc/lightdm/lightdm.conf`
 
 Below `[SeatDefault]` add `xserver-command=X -s 0 -dpms`.
 
 ###/etc/modprobe.d/8192cu.conf
 
+Disable power saving to avoid ssh dropouts.
+
+`sudo nano /etc/modprobe.d/8192cu.conf`
+
 ```
-sudo nano /etc/modprobe.d/8192cu.conf
+# Disable power saving 
+options 8192cu rtw_power_mgnt=0 rtw_enusbss=1 rtw_ips_mode=1
 ```
+
+### System Upgrade
 
 Use `sudo apt-get update && apt-get upgrade -y` to upgrade system.
 
@@ -73,9 +78,7 @@ Use `sudo apt-get update && apt-get upgrade -y` to upgrade system.
 
 Add network settings: 
 
-```
-sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
-```
+`sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
 
 ```shell
 network={
