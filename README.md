@@ -12,6 +12,12 @@ Exec `sudo dd bs=1m if=/Users/Chrissi/Downloads/2016-03-18-raspbian-jessie.img o
 
 ##Setup
 
+###SSH
+
+SSH is deactivated by default. To activate ssh via filesystem create a file `ssh` on the SD card.
+
+`touch ssh`
+
 Connect to Pi: `ssh IP` password is `raspberry`
 
 ###raspi-config
@@ -24,11 +30,15 @@ Connect to Pi: `ssh IP` password is `raspberry`
 - change timezone
 - advanced > memory split 256
 
-###/boot/config.txt
+### System Upgrade
 
-`sudo nano /boot/config.txt` 
+use `sudo apt-get update && apt-get upgrade -y`
 
-add 
+### Display Settings
+
+use `sudo nano /boot/config.txt` 
+
+and add 
 ```
 display_rotate=1
 hdmi_force_hotplug=1
@@ -59,7 +69,7 @@ Edit _/etc/lightdm/lightdm.conf_.
 
 Below `[SeatDefault]` add `xserver-command=X -s 0 -dpms`.
 
-###/etc/modprobe.d/8192cu.conf
+###Power Saving
 
 Disable power saving to avoid ssh dropouts.
 
@@ -69,10 +79,6 @@ Disable power saving to avoid ssh dropouts.
 # Disable power saving 
 options 8192cu rtw_power_mgnt=0 rtw_enusbss=1 rtw_ips_mode=1
 ```
-
-### System Upgrade
-
-Use `sudo apt-get update && apt-get upgrade -y` to upgrade system.
 
 ### WiFi
 
