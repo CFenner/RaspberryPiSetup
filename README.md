@@ -10,9 +10,9 @@ Exec `sudo dd bs=1m if=/Users/Chrissi/Downloads/2016-03-18-raspbian-jessie.img o
 - [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/)
 - [Raspberry SD Cards](https://www.raspberrypi.org/documentation/installation/sd-cards.md)
 
-##Setup
+## Setup
 
-###SSH
+### SSH
 
 SSH is deactivated by default. To activate ssh via filesystem create a file `ssh` on the SD card.
 
@@ -20,7 +20,7 @@ SSH is deactivated by default. To activate ssh via filesystem create a file `ssh
 
 Connect to Pi: `ssh IP` password is `raspberry`
 
-###raspi-config
+### raspi-config
 
 `sudo raspi-config`
 
@@ -48,7 +48,7 @@ overscan_top=-25
 overscan_bottom=-25
 ```
 
-###/etc/xdg/lxsession/LXDE-pi/autostart
+### /etc/xdg/lxsession/LXDE-pi/autostart
 
 `sudo nano /etc/xdg/lxsession/LXDE-pi/autostart`
 
@@ -61,7 +61,7 @@ add
 @xset s noblank
 ```
 
-###/etc/lightdm/lightdm.conf
+### /etc/lightdm/lightdm.conf
 
 Edit _/etc/lightdm/lightdm.conf_.
 
@@ -69,7 +69,7 @@ Edit _/etc/lightdm/lightdm.conf_.
 
 Below `[SeatDefault]` add `xserver-command=X -s 0 -dpms`.
 
-###Power Saving
+### Power Saving
 
 Disable power saving to avoid ssh dropouts.
 
