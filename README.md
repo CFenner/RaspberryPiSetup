@@ -48,6 +48,8 @@ overscan_top=-25
 overscan_bottom=-25
 ```
 
+`display_rotation` does no longer work, instead this helped: https://raspberrypi.stackexchange.com/a/111438/142968
+
 ### /etc/xdg/lxsession/LXDE-pi/autostart
 
 `sudo nano /etc/xdg/lxsession/LXDE-pi/autostart`
