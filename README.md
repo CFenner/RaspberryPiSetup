@@ -1,4 +1,4 @@
-# RasberryPiSetup
+# RaspberryPiSetup
 
 ## OS
 
@@ -6,7 +6,7 @@ Get [Raspberry Pi Imager](https://www.raspberrypi.com/software/) and format SD w
 
 ### Advanced Settings
 
-Press `Shift + + X` to open advanced settings.
+Press `Shift + CTRL + X` to open advanced settings.
 
 - enable SSH
 - change name
