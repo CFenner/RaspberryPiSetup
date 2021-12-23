@@ -44,6 +44,7 @@ use `sudo apt-get update && apt-get upgrade -y`
 ### Display Settings
 
 see https://raspberrypi.stackexchange.com/a/111438/142968
+https://pimylifeup.com/raspberry-pi-rotate-screen/
 
 use `sudo nano /boot/config.txt` 
 
