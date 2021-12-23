@@ -36,6 +36,8 @@ use `sudo apt-get update && apt-get upgrade -y`
 
 ### Display Settings
 
+see https://raspberrypi.stackexchange.com/a/111438/142968
+
 use `sudo nano /boot/config.txt` 
 
 and add 
@@ -50,7 +52,11 @@ overscan_bottom=-25
 
 `display_rotation` does no longer work, instead this helped: https://raspberrypi.stackexchange.com/a/111438/142968
 
-### /etc/xdg/lxsession/LXDE-pi/autostart
+### Disable ScreenSaver
+
+see https://www.geeks3d.com/hacklab/20160108/how-to-disable-the-blank-screen-on-raspberry-pi-raspbian/
+ 
+#### /etc/xdg/lxsession/LXDE-pi/autostart
 
 `sudo nano /etc/xdg/lxsession/LXDE-pi/autostart`
 
@@ -63,7 +69,7 @@ add
 @xset s noblank
 ```
 
-### /etc/lightdm/lightdm.conf
+#### /etc/lightdm/lightdm.conf
 
 Edit _/etc/lightdm/lightdm.conf_.
 
@@ -72,6 +78,8 @@ Edit _/etc/lightdm/lightdm.conf_.
 Below `[SeatDefault]` add `xserver-command=X -s 0 -dpms`.
 
 ### Power Saving
+
+see https://www.radishlogic.com/raspberry-pi/how-to-disable-screen-sleep-in-raspberry-pi/
 
 Disable power saving to avoid ssh dropouts.
 
