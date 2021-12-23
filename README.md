@@ -2,13 +2,18 @@
 
 ## OS
 
-Format SD card with FAT32. 
+Get [Raspberry Pi Imager](https://www.raspberrypi.com/software/) and format SD with a recent version of Raspberry Pi OS.
 
-Exec `sudo dd bs=1m if=/Users/Chrissi/Downloads/2016-03-18-raspbian-jessie.img of=/dev/rdisk2` on the terminal. 
+### Advanced Settings
 
-- [PiBaker](http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/)
-- [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/)
-- [Raspberry SD Cards](https://www.raspberrypi.org/documentation/installation/sd-cards.md)
+Press `Shift + + X` to open advanced settings.
+
+- enable SSH
+- change name
+- change locale
+- change timezone
+- set WIFI
+- set password
 
 ## Setup
 
@@ -21,6 +26,8 @@ SSH is deactivated by default. To activate ssh via filesystem create a file `ssh
 Connect to Pi: `ssh IP` password is `raspberry`
 
 ### raspi-config
+
+see https://www.radishlogic.com/raspberry-pi/how-to-disable-screen-sleep-in-raspberry-pi/
 
 `sudo raspi-config`
 
