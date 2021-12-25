@@ -88,6 +88,7 @@ Below `[SeatDefault]` add `xserver-command=X -s 0 -dpms`.
 ### Power Saving
 
 see https://www.radishlogic.com/raspberry-pi/how-to-disable-screen-sleep-in-raspberry-pi/
+see https://www.elektronik-kompendium.de/sites/raspberry-pi/1912231.htm
 
 Disable power saving to avoid ssh dropouts.
 
