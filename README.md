@@ -112,6 +112,10 @@ network={
 }
 ```
 
+### Disk Size
+
+see https://forum-raspberrypi.de/forum/thread/25004-kein-speicherplatz-mehr-verfuegbar/
+
 ### Usage
 
 Type `sudo halt` to stop the pi.
